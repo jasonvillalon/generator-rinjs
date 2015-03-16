@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    <title><%= humanizedAppName %></title>
+
+    <!-- build:css -->
+    <!-- Include generated stylesheet (from stylus sources) -->
+    <link rel="stylesheet" href="./build/css/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js -->
+    <!-- Bootstrap module loader and development environment -->
+    <script src="jspm_packages/system.js"></script>
+    <script src="jspm_packages/babel.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import("src/browser.jsx!").catch(console.warn.bind(console));
+    </script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+  </body>
+</html>

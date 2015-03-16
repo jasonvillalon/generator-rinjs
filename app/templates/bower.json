@@ -1,0 +1,8 @@
+{
+  "name": "paper",
+  "private": true,
+  "version": "0.1.0",
+  "dependencies": {
+    "font-awesome": "~4.3.0"
+  }
+}

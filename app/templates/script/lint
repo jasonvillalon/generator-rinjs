@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -e
+
+# Resolve project directory
+DIR=$(dirname $(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd))
+
+# Run
+(cd $DIR; gulp lint $@)

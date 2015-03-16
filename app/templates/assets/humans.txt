@@ -1,0 +1,16 @@
+/* http://humanstxt.org/ */
+
+/* TEAM */
+
+Chief Technology Officer: Ryan Leckey
+Contact: ryan@launchbadge.com
+Location: Sacramento, CA
+Username: mehcode
+
+/* THANKS */
+
+/* SITE */
+
+Last update: 2015/03/10
+Language: English
+Editor: Atom

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -e
+
+# Resolve project directory
+DIR=$(dirname $(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd))
+
+# Check if `npm` requires `sudo`
+if [[ $(which npm) == $HOME* ]]; then
+  npm='npm'
+else
+  npm='sudo npm'
+fi
+
+# Install global, server-side, node.js dependencies through `npm`
+$npm install --global gulp-cli jspm bower
+
+# Install local, server-side, node.js dependencies through `npm`
+(cd $DIR; npm install)
+
+# Install local, client-side, javascript dependencies through `jspm`
+(cd $DIR; jspm install)
+
+# Install local, client-side, non-javascript dependencies through `bower`
+(cd $DIR; bower install)
