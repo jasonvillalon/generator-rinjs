@@ -33,9 +33,9 @@ describe("Navigation", function() {
   })
 
   it("should navigate back to home page", function(){
-    var el = element(by.css(".navAbout"));
+    var el = element(by.css(".navHome"));
     el.click();
-    expect(element.all(by.css('.about-page')).count())
+    expect(element.all(by.css('.home-page')).count())
     .to.eventually.equal(1);
   })
 
