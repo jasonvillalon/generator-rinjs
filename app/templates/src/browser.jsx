@@ -2,17 +2,14 @@
 "format es6";
 
 import React from "react/addons";
+import director from "director";
+import routes from "./routes.jsx!";
 
-class Page extends React.Component {
+var router = null;
 
-  render() {
-    return (
-      <div className="container">
-        Hello World!
-      </div>
-    );
-  }
-
+var route = window.location.hash;
+if(!route){
+  window.location.href = "/#/";
 }
 
 // Ensure the DOM has finished loading
@@ -23,7 +20,13 @@ class Page extends React.Component {
     document.addEventListener("DOMContentLoaded", cb);
   }
 })(() => {
+  router = director.Router(routes);
 
-  React.render((<Page/>), document.body);
+  router.configure({
+    on: function(){
+    },
+    recurse: 'forward'
+  })
 
+  router.init();
 });

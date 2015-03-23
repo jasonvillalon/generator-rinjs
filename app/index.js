@@ -63,7 +63,9 @@ var rinJSGenerator = yeoman.generators.Base.extend({
     this.mkdir('styles');
     this.mkdir('src');
     this.mkdir('assets');
-    this.mkdir('scripts');
+    this.mkdir('script');
+    this.mkdir('src/components');
+    this.mkdir('src/components/pages');
 
     this.directory('styles');
     this.template('styles/main.styl', 'styles/main.styl');
@@ -76,8 +78,12 @@ var rinJSGenerator = yeoman.generators.Base.extend({
     this.copy('script/test');
 
     this.directory('src');
-    this.copy('src/alt.jsx');
+    this.copy('src/alt.js');
     this.copy('src/browser.jsx');
+
+    this.copy('src/components/masterpage.jsx');
+    this.copy('src/components/pages/about.jsx');
+    this.copy('src/components/pages/index.jsx');
 
     this.directory('assets');
     this.copy('assets/humans.txt');
@@ -87,8 +93,11 @@ var rinJSGenerator = yeoman.generators.Base.extend({
   renderApplicationDependenciesFiles: function() {
     this.template('package.json', 'package.json');
     this.template('bower.json', 'bower.json');
-    this.copy('gulpfile.js');
     this.copy('config.js');
+    this.copy('gulpfile.js');
+    this.copy('.editorconfig');
+    this.copy('.gitignore');
+    this.copy('.jshintrc');
   }
 });
 

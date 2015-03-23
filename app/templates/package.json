@@ -49,9 +49,11 @@
     },
     "dependencies": {
       "alt": "npm:alt@^0.14.2",
+      "director": "npm:director@^1.2.8",
       "jsx": "github:floatdrop/plugin-jsx@^1.0.1",
       "lodash": "npm:lodash@^3.5.0",
       "react": "npm:react@^0.13.0",
+      "superagent": "npm:superagent@^1.1.0",
       "velocity-animate": "npm:velocity-animate@^1.2.2"
     }
   }
