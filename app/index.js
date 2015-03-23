@@ -15,6 +15,7 @@ var rinJSGenerator = yeoman.generators.Base.extend({
         shell.exec('sudo chmod +x script/*');
         shell.exec('script/bootstrap');
         shell.exec('script/build');
+        shell.exec('script/test');
         shell.exec('script/run');
       }
     });
@@ -98,6 +99,16 @@ var rinJSGenerator = yeoman.generators.Base.extend({
     this.copy('.editorconfig');
     this.copy('.gitignore');
     this.copy('.jshintrc');
+  },
+
+  createTest: function(){
+    this.mkdir('test');
+    this.mkdir('spec');
+    this.directory('test');
+    this.copy('test/protractor.config.js');
+
+    this.directory('test/spec');
+    this.copy('test/spec/navigation.js');
   }
 });
 

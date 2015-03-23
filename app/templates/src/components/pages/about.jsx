@@ -7,7 +7,7 @@ class Index extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="about-page">
         About
       </div>
     );
